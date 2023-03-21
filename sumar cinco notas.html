@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+// Pedir los valores de los parciales, asignaciones y examen final al usuario
+let primerParcial = parseFloat(prompt("Ingresa la calificación del primer parcial del 1 al 10:"));
+let segundoParcial = parseFloat(prompt("Ingresa la calificación del segundo parcial del 1 al 10 :"));
+let asignacionTeorica = parseFloat(prompt("Ingresa la calificación de la asignación teórica del 1 al 30 :"));
+let asignacionPractica = parseFloat(prompt("Ingresa la calificación de la asignación práctica del 1 al 40:"));
+let examenFinal = parseFloat(prompt("Ingresa la calificación del examen final del 1 al 10 :"));
+
+// calcular las notas 
+// sumar todas las notas y dividirlas entre 5
+//primer parcial , segundo parcial y examen final aceptara notas del 1 al 10 entomces multiplicandola por 10 mostrara la nota en % del 1 al 100//
+
+let notaFinal =  ( primerParcial*10 + segundoParcial*10 + (asignacionTeorica/ 30)*100 + (asignacionPractica/ 40)*100 + examenFinal*10 ) / 5;
+
+
+// Evaluar y determinar la calificación correspondiente
+let calificacion;
+if (notaFinal >= 90) {
+  calificacion = "A";
+} else if (notaFinal >= 80) {
+  calificacion = "B";
+} else if (notaFinal >= 70) {
+  calificacion = "C";
+} else if (notaFinal >= 60) {
+  calificacion = "D";
+} else {
+  calificacion = "F";
+}
+
+// Imprimir el resultado
+console.log("La nota final es:",  notaFinal );
+console.log("La calificación correspondiente es:", calificacion);
+
+    </script>
+
+
+</body>
+</html>
+
